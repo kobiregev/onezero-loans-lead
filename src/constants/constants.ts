@@ -1,0 +1,2 @@
+export const MIN_DESKTOP_WIDTH = 768;
+export const ONEZERO_DISPATCH_PHONE_NUMBER = "*6121";
