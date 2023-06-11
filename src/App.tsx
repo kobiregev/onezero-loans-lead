@@ -12,18 +12,20 @@ import Qa from "./components/Qa/Qa";
 import Footer from "./components/Footer/Footer";
 import StickyFooter from "./components/Footer/StickyFooter";
 import { MIN_DESKTOP_WIDTH } from "./constants/constants";
+import { useIsScrolled } from "./hooks/useIsScrolled";
 
 function App() {
   const isDesktop = window.screen.width >= MIN_DESKTOP_WIDTH;
+  const isScrolled = useIsScrolled();
   return (
     <div>
-      {isDesktop && <StickyFooter />}
+      {isDesktop && isScrolled && <StickyFooter />}
       <FirstScreen />
-      <SecondScreen />
       <div className="md:flex w-full md:h-[40rem]">
         <Form />
         <FormImage />
       </div>
+      <SecondScreen />
       <ThirdScreen />
       <FourthScreen />
       <FifthScreen />

@@ -1,6 +1,6 @@
 import React, { CSSProperties, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Controller, Pagination, Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 // import "./styles.css";
@@ -47,6 +47,11 @@ const slideFooterStyle =
 const activeButtonStyle = "text-white bg-black";
 export default function FifthScreen({}: Props) {
   const [activeSlideIndex, setActiveSlideIndex] = useState(1);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType>();
+  function handleGalleryButtonClick(index: number) {
+    setActiveSlideIndex(index);
+    swiperInstance?.slideTo(index);
+  }
   return (
     <div className="flex flex-col items-center justify-center place-content-center py-14 px-0 gap-8 text-center">
       <h2 className="font-Digibank-Medium  text-2xl leading-7 md:text-[2.5rem] md:leading-4">
@@ -107,6 +112,9 @@ export default function FifthScreen({}: Props) {
 
       <div className="flex gap-8 font-Digibank-Apparat-Book text-base md:hidden ">
         <button
+          onClick={() => {
+            handleGalleryButtonClick(0);
+          }}
           className={`px-4 py-2 rounded-[3rem] ${
             activeSlideIndex === 0 && activeButtonStyle
           }`}
@@ -114,6 +122,9 @@ export default function FifthScreen({}: Props) {
           Zero
         </button>
         <button
+           onClick={() => {
+            handleGalleryButtonClick(1);
+          }}
           className={`px-4 py-2 rounded-[3rem] ${
             activeSlideIndex === 1 && activeButtonStyle
           }`}
@@ -121,6 +132,9 @@ export default function FifthScreen({}: Props) {
           One
         </button>
         <button
+           onClick={() => {
+            handleGalleryButtonClick(2);
+          }}
           className={`px-4 py-2 rounded-[3rem] ${
             activeSlideIndex === 2 && activeButtonStyle
           }`}
@@ -130,16 +144,21 @@ export default function FifthScreen({}: Props) {
       </div>
 
       <Swiper
-        pagination={{
-          enabled: true,
-          bulletActiveClass: "swiper-pagination-bullet-active bg-black",
-        }}
-        modules={[Pagination]}
-        className="w-11/12 h-[31rem] md:hidden"
-        spaceBetween={50}
-        slidesPerView={1}
-        onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
-        onSwiper={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
+       pagination={{
+        enabled: true,
+        bulletActiveClass: "swiper-pagination-bullet-active bg-black",
+      }}
+      modules={[Pagination, Controller]}
+      className="w-11/12 h-[31rem] md:hidden"
+      spaceBetween={50}
+      slidesPerView={1}
+      onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
+      controller={{ control: swiperInstance }}
+      onSwiper={(swiper) => {
+        swiper.slideTo(1);
+        setActiveSlideIndex(1);
+        setSwiperInstance(swiper);
+      }}
       >
         <SwiperSlide>
           <SlideCard style={{ backgroundImage: `url(${galleryZero})` }}>

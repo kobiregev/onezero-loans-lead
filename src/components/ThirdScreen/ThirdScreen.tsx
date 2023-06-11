@@ -19,7 +19,7 @@ const desktopImage = "hidden md:flex h-[23rem] w-[25.125rem] ";
 const mobileImage = "md:hidden ";
 export default function ThirdScreen({}: Props) {
   return (
-    <div className=" font-Digibank-Regular text-center px-5 py-14 flex flex-col gap-11 md:gap-[4.375rem] md:items-center  ">
+    <div className=" font-Digibank-Regular text-center px-5 py-14 flex flex-col gap-11 md:gap-[4.375rem] md:items-center bg-grey ">
       <div className={`${cardContainer} ${reversedRow} `}>
         <div>
           <h2 className={cardHeader}>זמינים כשנוח לך - שירות 24/6</h2>
