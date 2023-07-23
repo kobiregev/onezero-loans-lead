@@ -23,7 +23,7 @@ export default function FirstScreen({}: Props) {
             כאלה.
           </h2>
           <div className="font-Digibank-Regular leading-[16px] md:leading-[33.8px] md:text-[1.625rem]">
-            4.5% ריבית משתנה,
+            4.75% ריבית משתנה,
             <br />
             ניתן למשוך את הכסף בכל עת,
             <br />

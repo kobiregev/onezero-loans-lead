@@ -33,7 +33,7 @@ export default function SecondScreen({}: Props) {
       </HorizontalInfoCard>
       <HorizontalInfoCard className="md:hidden" src={Ball}>
         <h3 className={infoCardHeader}>
-          4.5% פיקדון בריבית
+          4.75% פיקדון בריבית
           <br />
           שנתית משתנה
         </h3>
@@ -44,7 +44,7 @@ export default function SecondScreen({}: Props) {
         </p>
       </HorizontalInfoCard>
       <HorizontalInfoCard className="md:hidden" src={Office}>
-        <h3 className={infoCardHeader}>ההלוואה מריבית פריים בלבד</h3>
+        <h3 className={infoCardHeader}>הלוואה מריבית פריים בלבד</h3>
         <p className={infoCardText}>
           עד ₪200,000 בפריסה של עד
           <br />
@@ -65,7 +65,7 @@ export default function SecondScreen({}: Props) {
         <VerticalInfoCard>
           <img className={cardImage} src={pikadon} alt="" />
           <h3 className={infoCardHeader}>
-            4.5% פיקדון בריבית
+            4.75% פיקדון בריבית
             <br />
             שנתית משתנה
           </h3>
@@ -79,7 +79,7 @@ export default function SecondScreen({}: Props) {
         </VerticalInfoCard>
         <VerticalInfoCard>
           <img className={cardImage} src={loan} alt="" />
-          <h3 className={infoCardHeader}>ההלוואה מריבית פריים בלבד</h3>
+          <h3 className={infoCardHeader}>הלוואה מריבית פריים בלבד</h3>
           <p className={infoCardText}>
             עד ₪200,000 בפריסה של עד
             <br />
