@@ -150,7 +150,7 @@ export default function StickyFooter({}: Props) {
           <img className="w-[1.375rem] h-[1.375rem]" src={phone} />
           שיחה עם נציג
         </a>
-        <p className="hidden md:block justify-self-end text-base font-Digibank-Regular text-neutral-700">
+        <p className="hidden md:block justify-self-end text-base font-OneZero-Apparat-Book text-neutral-700">
           6121*
         </p>
 

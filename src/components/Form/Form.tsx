@@ -57,7 +57,7 @@ export default function Form({}: Props) {
           birthyear: null,
           company_name: null,
           cupon: null,
-          event_type: "pikdonot",
+          event_type: "Loans",
           form_type: null,
           founders_lead_name: null,
           free_text: null,

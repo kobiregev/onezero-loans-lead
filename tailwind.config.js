@@ -26,6 +26,7 @@ export default {
       "Digibank-Apparat-Book": "Digibank-Apparat-Book",
       "Digibank-Regular": "Digibank-Regular",
       "Digibank-Medium": "Digibank-Medium",
+      "OneZero-Apparat-Book": "OneZero-Apparat-Book",
     },
     listStyleType: {
       plus: "'+'",

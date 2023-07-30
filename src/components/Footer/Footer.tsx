@@ -13,7 +13,7 @@ export default function Footer({}: Props) {
           alt="לוגו onezero"
         />
         <p className="md:hidden text-[0.5rem] font-Digibank-Regular text-darkgrey leading-3 opacity-70 my-4 md:text-xs 2xl:text-sm">
-          הלוואות - בתוקף עד ליום 30.6.23. ציון שיעור ריבית מתואמת על ההלוואה.
+          הלוואות - בתוקף עד ליום 31.08.23. ציון שיעור ריבית מתואמת על ההלוואה.
           אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית פיגורים והליכי הוצאה
           לפועל. פרסום זה אינו מהווה הצעה ו/או התחייבות למתן הלוואה. אישור
           ההלוואה, סכומה ותנאיה כפופים לתנאי הבנק ולשיקול דעתו הבלעדי של הבנק.
@@ -33,7 +33,7 @@ export default function Footer({}: Props) {
           </a>
         </p>
         <p className="hidden md:block font-Digibank-Regular text-sm leading-[1.4] text-darkGrey ">
-          הלוואות - בתוקף עד ליום 30.6.23. ציון שיעור ריבית מתואמת על ההלוואה.
+          הלוואות - בתוקף עד ליום 31.08.23. ציון שיעור ריבית מתואמת על ההלוואה.
           אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית
           <br />
           פיגורים והליכי הוצאה לפועל. פרסום זה אינו מהווה הצעה ו/או התחייבות
@@ -61,7 +61,7 @@ export default function Footer({}: Props) {
           </a>
         </p>
       </div>
-      <p className="font-Digibank-Regular text-sm"> בית עובד 5, תל אביב.</p>
+      <p className="font-Digibank-Regular text-[0.5rem] text-darkGrey md:text-sm text-start  self-start "> בית עובד 5, תל אביב.</p>
     </footer>
   );
 }

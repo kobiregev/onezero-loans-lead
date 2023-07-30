@@ -15,6 +15,10 @@
   font-family: "Digibank-Apparat-Book";
   src: url("./assets//fonts/Apparat-Book-TRIAL.otf");
 }
+@font-face {
+  font-family: "OneZero-Apparat-Book";
+  src: url("./assets//fonts/OneZero-Apparat-Book.woff");
+}
 
 @layer base {
   html {

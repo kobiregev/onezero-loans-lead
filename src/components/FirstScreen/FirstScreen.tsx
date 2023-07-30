@@ -3,7 +3,7 @@ import oneZeroLogo from "../../assets/onezero-logo.svg";
 import IconParagraph from "./IconParagraph";
 import firstScreenIllustration from "../../assets/firstscreen-illustration.png";
 import firstScreenIllustrationDesktop from "../../assets/firstscreen-illustration-desktop.png";
-
+import checked from "../../assets/icons/checked-white.svg";
 type Props = {};
 export default function FirstScreen({}: Props) {
   return (
@@ -15,19 +15,25 @@ export default function FirstScreen({}: Props) {
       />
       <div className="max-w-[100vw] md:flex md:mt-6 md:gap-[9.125rem] md:justify-between ">
         <div className=" flex flex-col gap-4 md:gap-6 font-Digibank-Regular 3xl:self ">
-          <h2 className="text-[2.875rem] leading-[0.9] md:text-[6.9875rem] md:leading-[0.95]  md:whitespace-nowrap">
-            אין
+          <header className="text-[24.92px] md:text-[42px] md:whitespace-nowrap">
+            הלוואה עד
             <br />
-            פיקדונות
+            <span className="font-OneZero-Apparat-Book text-7xl leading-[71.21px] md:text-[120px] md:leading-[120px]">
+              ₪200K
+            </span>
             <br />
-            כאלה.
-          </h2>
-          <div className="font-Digibank-Regular leading-[16px] md:leading-[33.8px] md:text-[1.625rem]">
-            4.75% ריבית משתנה,
+            החל מריבית פריים בלבד
+          </header>
+          <div className="font-Digibank-Regular leading-[16px] md:text-[26px] md:leading-4">
+            <div className="flex items-start gap-2 ">
+              <img className="w-[10.5px] h-[7.5px]" src={checked} alt="check" />
+              עד 72 תשלומים
+            </div>
             <br />
-            ניתן למשוך את הכסף בכל עת,
-            <br />
-            ללא מינימום הפקדה.
+            <div className="flex  items-start gap-2">
+              <img src={checked} alt="check" />
+              ללא עמלת טיפול בהלוואה
+            </div>
           </div>
         </div>
         <img
@@ -42,18 +48,26 @@ export default function FirstScreen({}: Props) {
         />
 
         <p className="font-Digibank-Regular text-[0.625rem] leading-none md:hidden ">
-          בכפוף לתנאי הבנק והפיקדון. בריבית משתנה, בהפקדה חד
+          בתוקף עד ליום 31/08/23 . אי עמידה בפירעון ההלוואה עלול
           <br />
-          פעמית לשנה, ניתן לשבור את הפיקדון בכל עת ולקבל את
+          לגרור ריבית פיגורים והליכי הוצאה לפועל. פרסום זה אינו
           <br />
-          הקרן עם 10% מהריבית המקורית של הפיקדון.{" "}
+          מהווה הצעה ו/או התחייבות למתן הלוואה. אישור ההלוואה,
+          <br />
+          סכומה ותנאיה כפופים לתנאי הבנק ולשיקול דעתו הבלעדי
+          <br />
+          של הבנק.
         </p>
       </div>
       <p className="hidden md:block text-base font-Digibank-Regular leading-none mb-16">
-        בכפוף לתנאי הבנק והפיקדון. בריבית משתנה, בהפקדה חד פעמית לשנה, ניתן
-        לשבור
+        בתוקף עד ליום 31/08/23 . אי עמידה בפירעון ההלוואה עלול לגרור ריבית
+        פיגורים והליכי
         <br />
-        את הפיקדון בכל עת ולקבל את הקרן עם 10% מהריבית המקורית של הפיקדון.
+         הוצאה לפועל. פרסום זה אינו מהווה הצעה ו/או התחייבות למתן
+        הלוואה. אישור ההלוואה,
+        <br />
+         סכומה ותנאיה כפופים לתנאי הבנק ולשיקול דעתו
+        הבלעדי של הבנק.
       </p>
     </div>
   );
