@@ -12,6 +12,8 @@ import {
 } from "../../constants/constants";
 import { openAppStore } from "../../utils/openAppStore";
 import { isDispatchOpen } from "../../utils/onezeroDispatch";
+import dolphinMsq from "https://adsil1.com/onezero/cdn/msq.js";
+
 type Props = {};
 
 export default function StickyFooter({}: Props) {
@@ -30,94 +32,7 @@ export default function StickyFooter({}: Props) {
     ? "justify-between"
     : "justify-center md:justify-between";
     useEffect(() => {
-      let counter = 0;
-      const interval = setInterval(() => {
-        msq_r(function () {
-          var pixel_settings = {
-            setting_api_key: "462-716ad1-bef",
-            setting_debug: true,
-            setting_wait4async: true,
-            setting_ignore_cookies: false,
-            setting_retry_load_Interval: 400,
-            setting_delay_load: 5,
-            setting_disable_autorun: true,
-          };
-          let isSuccessfullyReplaced = [];
-          const msq_pixel = new MSQ(pixel_settings);
-          msq_pixel.referrer_replace_selector_link_tel(
-            "#onezeroCallButton",
-            "073-7823322",
-            "*",
-            "073-7823322"
-          );
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7794171",
-              "google",
-              "073-7794171"
-            )
-          );
-  
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7819560",
-              "facebook",
-              "073-7819560"
-            )
-          );
-  
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7824960",
-              "gclid",
-              "073-7824960"
-            )
-          );
-  
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7824960",
-              "wbraid",
-              "073-7824960"
-            )
-          );
-  
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7842629",
-              "pmax",
-              "073-7842629"
-            )
-          );
-          isSuccessfullyReplaced.push(
-            msq_pixel.referrer_replace_selector_link_tel(
-              "#onezeroCallButton",
-              "073-7823737",
-              "discovery",
-              "073-7823737"
-            )
-          );
-      
-  
-          if (isSuccessfullyReplaced.some((value) => value) || counter === 2) {
-            clearInterval(interval);
-          }
-          msq_pixel.push("__ga4_tid", "G-SGHQKQ4T4S");
-          msq_pixel.process();
-          counter++;
-        });
-        function msq_r(f) {
-          /in/.test(document.readyState)
-            ? setTimeout("msq_r(" + f + ")", 9)
-            : f();
-        }
-      }, 1000);
-      return () => clearInterval(interval);
+      dolphinMsq.init();
     }, []);
   return (
     <>
